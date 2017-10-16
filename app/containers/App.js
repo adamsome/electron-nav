@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react'
 import type { Children } from 'react'
 import Layout from '../components/Layout'
@@ -10,17 +9,8 @@ export default class App extends Component {
   }
 
   render() {
-    const treeData = [
-      {
-        title: 'B7971001',
-        children: [
-          { title: '001 2017/10/13 20:57' }
-        ]
-      }
-    ]
-
     return (
-      <Layout sidebar={<Sidebar treeData={treeData} />}>
+      <Layout sidebar={<Sidebar />}>
         {this.props.children}
       </Layout>
     )

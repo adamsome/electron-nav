@@ -1,0 +1,22 @@
+.link {
+  cursor: pointer;
+  position: relative;
+  padding: 0px 5px;
+  display: block;
+}
+
+.link:focus { outline: 0; }
+
+.active {
+  background: #ddd;
+}
+
+.wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.name {
+  line-height: 24px;
+  vertical-align: middle;
+}

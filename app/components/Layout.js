@@ -13,8 +13,8 @@ export default class Layout extends Component {
     return (
       <SplitPane
         split="vertical"
-        minSize={50}
-        defaultSize={150}
+        minSize={200}
+        defaultSize={300}
         pane2Style={{ overflowY: 'auto' }}
       >
         <div>
