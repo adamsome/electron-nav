@@ -2,7 +2,7 @@
 
 <br/>
 
-Based on Electron React Boilerplate
+Based on [Electron React Boilerplate][github-url]
 
 [![Github Tag][github-tag-image]][github-tag-url] 
 
@@ -237,3 +237,4 @@ MIT © [C. T. Lin](https://github.com/chentsulin)
 
 [github-tag-image]: https://img.shields.io/github/tag/chentsulin/electron-react-boilerplate.svg
 [github-tag-url]: https://github.com/chentsulin/electron-react-boilerplate/releases/latest
+[github-url]: https://github.com/chentsulin/electron-react-boilerplate
