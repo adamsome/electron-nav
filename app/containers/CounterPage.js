@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Counter from '../components/Counter'
 import * as CounterActions from '../actions/counter'
 
+// NOTE: This is just an example component
 function mapStateToProps(state) {
   return {
     counter: state.counter

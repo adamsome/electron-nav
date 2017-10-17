@@ -1,7 +1,9 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 import Tree from './Tree/Tree'
+import styles from './Sidebar.css'
 
+// TODO: Improve tree
 const treeData = {
   name: 'B7971001',
   children: [
@@ -21,11 +23,14 @@ const treeData = {
   ]
 }
 
+// TODO: Store tree data in Redux and create actions and reducer
+// TODO: Link to Entity onSelect
+// TODO: Add close button to the sidebar (and and open button when closed)
 export default class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.onToggle = this.onToggle.bind(this);
+    // this.onToggle = this.onToggle.bind(this);
   }
 
   onToggle(node, toggled) {
@@ -39,15 +44,12 @@ export default class Sidebar extends React.Component {
   }
 
   render() {
-    const containerStyle = {
-      backgroundColor: '#f4f4f4',
-      height: '100vh'
-    }
-
     return (
-      <div style={containerStyle}>
-        <Header size="small">NAVIGATOR</Header>
-        <Tree data={treeData} onToggle={this.onToggle} />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Header size="small">NAVIGATOR</Header>
+        </div>
+        <Tree data={treeData} onToggle={::this.onToggle} />
       </div>
     )
   }

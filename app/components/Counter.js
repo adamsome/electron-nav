@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
 import styles from './Counter.css'
 
-
+// NOTE: This is just an example component
 class Counter extends Component {
   props: {
     increment: () => void,
