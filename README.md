@@ -2,9 +2,9 @@
 
 <br/>
 
-Based on:
+Based on Electron React Boilerplate
 
-[![Github Tag][github-tag-image]][github-tag-url]
+[![Github Tag][github-tag-image]][github-tag-url] 
 
 Uses:
 
