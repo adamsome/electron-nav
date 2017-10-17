@@ -8,7 +8,7 @@
 .link:focus { outline: 0; }
 
 .active {
-  background: #ddd;
+  background: #e0e0e2;
 }
 
 .wrapper {

@@ -9,7 +9,7 @@ export default () => (
   <App>
     <Switch>
       <Route path="/counter" component={CounterPage} />
-      <Route path="/" component={EntityPage} />
+      <Route path="/entity/:id" component={EntityPage} />
     </Switch>
   </App>
 )

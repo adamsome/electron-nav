@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import type { Children } from 'react'
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 
-export default class App extends Component {
-  props: {
-    children: Children
-  }
-
-  render() {
-    return (
-      <Layout sidebar={<Sidebar />}>
-        {this.props.children}
-      </Layout>
-    )
-  }
+type AppType = {
+  children: Children
 }
+
+const App = ({ children }: AppType) => (
+  <Layout sidebar={<Sidebar />}>
+    {children}
+  </Layout>
+)
+
+export default App
