@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Popup, Container, Label, Breadcrumb, Header } from 'semantic-ui-react'
+import { Popup, Container, Breadcrumb, Header } from 'semantic-ui-react'
 import styles from './Step.css'
 
 type Props = {
@@ -39,7 +39,7 @@ const Step = ({
   createdBy,
   createdAt,
   createdAtDisplay,
-  scripts,
+  // scripts,
   comments,
 }: Props) => (
   <div className={styles.container}>
