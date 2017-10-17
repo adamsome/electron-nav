@@ -1,10 +1,10 @@
 .container {
-  background: #f4f4f4;
+  background: #f4f4f6;
   height: 100vh;
   padding-top: 20px;
 }
 
 .header {
-  margin: 0 0 10px 8px;
+  margin: 0 0 10px 10px;
   color: red;
 }

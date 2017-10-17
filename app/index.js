@@ -6,7 +6,13 @@ import { configureStore, history } from './store/configureStore'
 
 import './app.global.scss'
 
+// const initialTestState = {
+// }
+
 const store = configureStore()
+
+// TODO: Actually store the last place user left off
+history.push('/entity/0000000001')
 
 render(
   <AppContainer>

@@ -6,15 +6,19 @@ import styles from './Sidebar.css'
 // TODO: Improve tree
 const treeData = {
   name: 'B7971001',
+  toggled: true,
   children: [
     {
-      name: '001 2017/10/13 20:57',
+      name: 'L01 2017/10/13 20:57',
+      toggled: true,
       children: [
         {
-          name: 'T001',
+          name: 'T01',
+          toggled: true,
+          active: true,
           children: [
             {
-              name: 'A001'
+              name: 'A01'
             }
           ]
         }
@@ -26,6 +30,7 @@ const treeData = {
 // TODO: Store tree data in Redux and create actions and reducer
 // TODO: Link to Entity onSelect
 // TODO: Add close button to the sidebar (and and open button when closed)
+// TODO: Change to state-less function
 export default class Sidebar extends React.Component {
   constructor(props) {
     super(props);

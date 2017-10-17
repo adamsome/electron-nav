@@ -1,52 +1,58 @@
+// @flow
 import React from 'react'
 import NodeHeader from './NodeHeader'
 import styles from './Node.css'
 
-export default class Node extends React.Component {
-  static renderLoading() {
-    return (
-      <ul className={styles.children}>
-        <li>
-          <div className={styles.loading}>
-            Loading...
-          </div>
-        </li>
-      </ul>
-    )
-  }
+export type NodeType = {
+  name: string,
+  toggled?: boolean,
+  active?: boolean,
+  children?: Array<NodeType>
+}
+export type ToggleFuncType = (data: NodeType, toggle: boolean) => void
+type NodeComponentType = {
+  node: NodeType,
+  onToggle: ToggleFuncType
+}
 
-  renderChildren() {
-    const { node, onToggle } = this.props
+const Loading = () => (
+  <li>
+    <div className={styles.loading}>
+      Loading...
+    </div>
+  </li>
+)
 
-    if (!node.toggled) return null
-    if (node.loading) return this.renderLoading()
+const Children = ({ node, onToggle }: NodeComponentType) => {
+  let children = node.children
+  if (!Array.isArray(children)) children = children ? [children] : []
 
-    let children = node.children
-    if (!Array.isArray(children)) children = children ? [children] : []
-
-    return (
-      <ul className={styles.children}>
-        {children.map((child, i) => (
+  return (
+    <ul className={styles.children}>
+      {node.loading
+        ? <Loading />
+        : children.map((child, i) => (
           <Node
             key={child.id || i}
             node={child}
             onToggle={onToggle}
           />
-        ))}
-      </ul>
-    )
-  }
-
-  render() {
-    const { node, onToggle } = this.props
-    return (
-      <li className={styles.item}>
-        <NodeHeader
-          node={node}
-          onClick={() => onToggle(node, !node.toggled)}
-        />
-        {this.renderChildren()}
-      </li>
-    )
-  }
+      ))}
+    </ul>
+  )
 }
+
+const Node = ({ node, onToggle }: NodeComponentType) => (
+  <li className={styles.item}>
+    <NodeHeader
+      node={node}
+      handleClick={() => onToggle(node, !node.toggled)}
+    />
+    {node.toggled
+      ? <Children {...{ node, onToggle }} />
+      : null
+    }
+  </li>
+)
+
+export default Node
