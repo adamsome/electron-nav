@@ -10,7 +10,7 @@ const treeData = {
   toggled: true,
   children: [
     {
-      name: 'L01 2017/10/13 20:57',
+      name: 'L01 2017-10-13 20:57',
       toggled: true,
       children: [
         {

@@ -1,0 +1,40 @@
+.container {
+  padding: 16px;
+}
+
+.headerLabels {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+
+.headerLabel {
+  display: inline-block;
+  padding-left: 12px;
+  margin-top: -4px;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.createdBy {
+  color: var(--color);
+  font-weight: 800;
+  padding-left: 18px;
+  cursor: pointer;
+}
+
+.createdAt {
+  color: var(--color-subtle);
+  font-weight: 400;
+}
+
+.comments {
+  margin-top: 14px;
+}
+
+.commentsEdit {
+  margin-left: 10px;
+  color: var(--color-subtle);
+  font-size: 87%;
+  cursor: pointer;
+}
